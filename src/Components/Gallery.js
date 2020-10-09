@@ -38,7 +38,8 @@ function Gallery() {
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap items-center text-3xl text-lightGray-100">
+        {/* Image Number */}
+        <div className="flex-wrap items-center text-3xl text-lightGray-100 hidden lg:flex">
           <div className="mr-10">0{currentIndex + 1}</div> 
           <div className="count-separator mr-10 bg-lightGray-100 w-10 h-px"></div>
           <div className="">0{villas.length}</div>
