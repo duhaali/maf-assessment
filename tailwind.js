@@ -10,6 +10,7 @@ module.exports = {
   separator: ':',
   theme: {
     screens: {
+      xs: '425px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -132,6 +133,10 @@ module.exports = {
         800: '#97266d',
         900: '#702459',
       },
+      darkGray:'#333333',
+      lightGray: {
+        100:'#BDBDBD'
+      }
     },
     spacing: {
       px: '1px',
@@ -153,6 +158,11 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '8w': '8vw',
+      '10w': '10vw',
+      '15w': '15vw',
+      '10h': '10vh',
+      '15h': '15vh',
     },
     backgroundColor: theme => theme('colors'),
     backgroundImage: {
@@ -264,6 +274,7 @@ module.exports = {
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      mont: ["'Mont'", 'sans-serif']
     },
     fontSize: {
       xs: '0.75rem',
@@ -727,7 +738,7 @@ module.exports = {
     minWidth: ['responsive'],
     objectFit: ['responsive'],
     objectPosition: ['responsive'],
-    opacity: ['responsive', 'hover', 'focus'],
+    opacity: ['responsive', 'hover', 'focus', 'disabled'],
     order: ['responsive'],
     outline: ['responsive', 'focus'],
     overflow: ['responsive'],

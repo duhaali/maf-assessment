@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
-import Gallery from "./Gallery/Gallery";
+import Gallery from "./Components/Gallery";
+import SocialMedia from "./Components/SocialMedia";
+import Aside from "./Components/Aside";
 
 function App() {
   return (
-    <div className="App">
+    <main className="flex flex-wrap flex-col relative lg:flex-row">
       <Gallery></Gallery>
-    </div>
+      <Aside></Aside>
+      <SocialMedia></SocialMedia>
+    </main>
   );
 }
 export default App;

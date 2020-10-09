@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.burger-button {
+  position: relative;
+  margin-top: 5px;
+}
+.burger-button::before{
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  transform: translateY(-5px);
+  content: '';
+  background-color: black;
+}
+.burger-button::after{
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  bottom: 0;
+  content: '';
+  background-color: black;
+  transform: translateY(5px);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.prev-button, .next-button {
+  position: relative;
+  transition: opacity 250ms ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.prev-button::after, .next-button::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -0.5rem;
+  background-color: #333333;
+  transition: all 250ms ease-in-out;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.next-button::after {
+  right: 0;
+  transform: translateX(-100%);
 }
-
-.App-link {
-  color: #61dafb;
+.next-button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.prev-button::after {
+  left: 0;
+  transform: translateX(100%);
+}
+.prev-button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+.prev-button:disabled::after, .next-button:disabled::after {
+  content: none;
+}
+.villa-image {
+  transition: transform 500ms ease-in-out;
+}
+.villa-image:hover {
+  transform: scale(1.5);
+}
+.count-separator {
+  transform: rotate(-45deg);
 }
