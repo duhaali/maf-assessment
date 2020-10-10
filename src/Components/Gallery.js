@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import villas from "../mock-data";
+const villas = require("../mock-data");
 
 function Gallery() {
 
