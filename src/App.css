@@ -45,7 +45,7 @@
 .menu input:checked,
 .menu input:checked ~ .burger-button,
 .menu input:checked ~ .burger-button-background {
-  transform: translateX(-13vw);
+  transform: translateX(-12.5vw);
 }
 .menu input:checked ~ .burger-button-background {
   box-shadow: rgba(20,20,20,0.2) -10px 0px 15px;
