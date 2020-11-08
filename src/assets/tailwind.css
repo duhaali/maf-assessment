@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/MontDemo-ExtraLight.otf'); /* IE9 Compat Modes */
+    src: local('Mont'), local('Mont'),
+         url('./fonts/MontDemo-ExtraLight.otf') format('embedded-opentype')
+  }
